@@ -52,7 +52,6 @@ class AccountController {
                 $errors['confirmPass'] = "Mật khẩu và xác nhận chưa đúng"; 
             } 
 
-            // Kiểm tra username đã được đăng ký chưa? 
             $account = $this->accountModel->getAccountByUsername($username); 
             if($account){ 
                 $errors['account'] = "Tài khoản này đã có người đăng ký!"; 
@@ -85,8 +84,8 @@ class AccountController {
                 $pwd_hashed = $account->password; 
                 if (password_verify($password, $pwd_hashed)) { 
                     $_SESSION['username'] = $account->username; 
-                    $_SESSION['account_id'] = $account->id; // Store account_id in session
-                    $_SESSION['role'] = $account->role; // Store role in session
+                    $_SESSION['account_id'] = $account->id; 
+                    $_SESSION['role'] = $account->role; 
                     header('Location: /buoi2/product'); 
                     exit; 
                 } else { 

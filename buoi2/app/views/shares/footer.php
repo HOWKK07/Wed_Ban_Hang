@@ -7,7 +7,8 @@
                 <p>
                     Địa chỉ: 123 Đường ABC, Quận XYZ, TP. Hồ Chí Minh<br>
                     Điện thoại: 0123 456 789<br>
-                    Email: info@example.com
+                    Email: thinhnguyenkk07@gmail.com<br>
+                    GitHub: <a href="https://github.com/HOWKK07/Wed_Ban_Hang" target="_blank">HOWKK07/Wed_Ban_Hang</a>
                 </p>
             </div>
             <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
@@ -33,7 +34,7 @@
         </div>
     </div>
     <div class="text-center p-3 bg-dark text-white">
-        © 2025 Bản quyền thuộc về Quản lý sản phẩm
+        © 2025 Bản quyền thuộc về Nguyễn Văn Thịnh (HOWKK07)
     </div>
 </footer>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
