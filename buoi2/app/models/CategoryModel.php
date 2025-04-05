@@ -30,15 +30,12 @@ class CategoryModel
 
     public function addCategory($name, $description)
     {
-        // Sanitize inputs
         $name = htmlspecialchars(strip_tags($name));
         $description = htmlspecialchars(strip_tags($description));
 
-        // Insert query
         $query = "INSERT INTO " . $this->table_name . " (name, description) VALUES (:name, :description)";
         $stmt = $this->conn->prepare($query);
 
-        // Bind parameters
         $stmt->bindParam(':name', $name);
         $stmt->bindParam(':description', $description);
 
@@ -53,11 +50,9 @@ class CategoryModel
         $query = "UPDATE " . $this->table_name . " SET name=:name, description=:description WHERE id=:id";
         $stmt = $this->conn->prepare($query);
 
-        // Sanitize inputs
         $name = htmlspecialchars(strip_tags($name));
         $description = htmlspecialchars(strip_tags($description));
 
-        // Bind parameters
         $stmt->bindParam(':id', $id);
         $stmt->bindParam(':name', $name);
         $stmt->bindParam(':description', $description);
